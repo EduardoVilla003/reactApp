@@ -1,39 +1,41 @@
-const restaurantStack = {
+
+const RestaurantStack = {
     tab: "RestaurantesTab",
     restaurants: "Restaurantes",
     add_restaurant: "Agregar Restaurante"
 }
 
-const favoriteStack = {
+const FavoriteStack = {
     tab: "FavoritosTab",
     favorites: "Favoritos",
     add_favorite: "Agregar favorito"
 }
 
-const accountStack = {
+const AccountStack = {
     tab: "CuentaTab",
     account: "Cuenta",
-    add_account: "Añadir Cuenta"
+    login: "Login",
+    register: "Registro"
 }
 
-const rankingStack = {
+const RankingStack = {
     tab: "RankingTab",
     ranking: "Ranking",
     add_ranking: "Añadir Ranking"
 }
 
-const searchStack = {
+const SearchStack = {
     tab: "BuscarTab",
     search: "Buscar",
     add_search: "Añadir busqueda"
 }
 
 const screens = {
-    restaurants: restaurantStack,
-    favorites: favoriteStack,
-    account: accountStack,
-    ranking: rankingStack,
-    search: searchStack
+    restaurants: RestaurantStack,
+    favorites: FavoriteStack,
+    account: AccountStack,
+    ranking: RankingStack,
+    search: SearchStack
 }
 
 export default screens;

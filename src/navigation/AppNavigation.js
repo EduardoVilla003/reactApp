@@ -1,18 +1,18 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-// import RestaurantScreen from '../screens/restaurants/RestaurantScreen';
-import restaurantsStacks from './restaurantsStacks';
-import favoritesStacks from './favoriteStacks';
-import accountStacks from './accountStacks';
-import rankingStacks from './rankingStacks';
-import searchStacks from './searchStacks';
+import restaurantsStacks from './RestaurantsStacks';
+import favoritesStacks from './FavoriteStacks';
+import accountStacks from './AccountStacks';
+import rankingStacks from './RankingStacks';
+import searchStacks from './SearchStacks';
 import screenNames from '../utils/screenName'
+
+
 
 const Tab = createBottomTabNavigator();
 let iconName;
 
 function getScreenOptionsIcons(screen, focused) {
-
 
     switch (screen) {
         case screenNames.restaurants.tab:
@@ -46,7 +46,6 @@ function getScreenOptionsIcons(screen, focused) {
             break;
     }
 
-
 }
 
 export default function AppNavigation() {
@@ -63,11 +62,13 @@ export default function AppNavigation() {
                 headerShown: false
             })}
         >
-            <Tab.Screen name={screenNames.restaurants.tab}
+            <Tab.Screen
+                name={screenNames.restaurants.tab}
                 component={restaurantsStacks}
                 options={{ title: screenNames.restaurants.restaurants }}
             />
-            <Tab.Screen name={screenNames.ranking.tab}
+            <Tab.Screen
+                name={screenNames.ranking.tab}
                 component={rankingStacks}
                 options={{ title: screenNames.ranking.ranking }}
 
